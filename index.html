@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/Plyr/plyr.css" />
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/vanilla-calendar.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/BRITANIC.ttf">
+    <link rel="stylesheet" href="css/main.css">
    
     <title>Tapycard Profile</title>
 </head>
@@ -57,438 +59,264 @@
             <!-- begin of:: user-details  -->
             <div class="user-details text-center py-2 pb-5">
               <div class="head ">
-                <div class="row px-3">
-                  <div class="col-6 text-center">
-                    <a href="#">save contact</a>
-                  </div>
-                  <div class="col-6 text-center">
-                    <a href="#">exchange contact</a>
-                  </div>
+                <div class="row px-3 d-flex justify-content-center align-items-center">
+                    <a href="#">save contact</a>  
+                    <a class="hover" id="exchange-contact">exchange contact</a>
                 </div>
               </div>
-                <div class="nav-tabs">
-                  <ul class="nav nav-pills" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="about-tab" data-bs-toggle="pill" data-bs-target="#pills-about"
-                        type="button" role="tab" aria-controls="pills-contact" aria-selected="true">About</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="links-tab" data-bs-toggle="pill" data-bs-target="#pills-links"
-                        type="button" role="tab" aria-controls="pills-work" aria-selected="false">Links</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="contact-info-tab" data-bs-toggle="pill" data-bs-target="#pills-contact-info"
-                        type="button" role="tab" aria-controls="pills-word" aria-selected="false">Contact info</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="images-tab" data-bs-toggle="pill" data-bs-target="#pills-images"
-                        type="button" role="tab" aria-controls="pills-word" aria-selected="false">Images</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="videos-tab" data-bs-toggle="pill" data-bs-target="#pills-videos"
-                        type="button" role="tab" aria-controls="pills-word" aria-selected="false">Videos</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="appointment-tab" data-bs-toggle="pill" data-bs-target="#pills-appointment"
-                        type="button" role="tab" aria-controls="pills-word" aria-selected="false">Appointment</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="payment-tab" data-bs-toggle="pill" data-bs-target="#pills-payment"
-                        type="button" role="tab" aria-controls="pills-word" aria-selected="false">Payment</button>
-                    </li>
-                  </ul>
+                <div class="contact-container" id="contact-container">
+                  <div class="row px-3 d-flex justify-content-end align-items-center text-end">
+                    <a class="back-btn" id="backBtn">back</a>
+                  </div>
+                  <h3 class="title"> Contact 
+                    <span class="caret-left"><i class="fa-solid fa-caret-left"></i></span>
+                    <span class="caret-right"><i class="fa-solid fa-caret-right"></i></span>
+                  </h3>
+                  <div class="row w-100 p-0 m-0 py-2">
+                    <p>Fill out the form and You will receive Yousef's contact to above email.</p>
+                  </div>
+                  <div class="contact-form-container">
+                    <form action="#">
+                      <div class="row m-0 px-3">
+                        <div class="col-12 p-2">
+                          <input type="text" class="form-control text-inputs" placeholder="Name" >
+                        </div>
+                        <div class="col-12 p-2">
+                          <input type="email" class="form-control text-inputs" placeholder="Email" >
+                        </div>
+                        <div class="col-12 p-2">
+                          <input type="text" class="form-control text-inputs" placeholder="Phone Number" >
+                        </div>
+                        <div class="col-12 text-center">
+                          <button type="button" class="btn" id="submitContactBtn">Exchange Contact</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
                 </div>
-                <div class="tab-content" id="pills-tabContent">
-                  <div class="tab-pane fade show active about-content p-2" id="pills-about" role="tabpanel" aria-labelledby="about-tab">
-                    <h3 class="title"> About 
-                      <span class="caret-left"><i class="fa-solid fa-caret-left"></i></span>
-                      <span class="caret-right"><i class="fa-solid fa-caret-right"></i></span>
-                    </h3>
-                    <div class="business-hours text-center py-3 pt-4">
-                      <img src="images/about/bussines-hours.png" alt="business-hours">
-                      <div class="row d-flex m-0 py-4">
-                        <div class="calender">
-                          <img src="images/about/outline.png" alt="outline image">
-                          <div class="calender-details">
-                            <div class="date">
-                              <p>SAT</p>
-                              <div class="small-line">
-                              </div>
-                              <span>15<sup>th</sup></span>
-                            </div>
-                            <div class="range">
-                              <span></span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="calender">
-                          <img src="images/about/outline.png" alt="outline image">
-                          <div class="calender-details">
-                            <div class="date">
-                              <p>SUN</p>
-                              <div class="small-line">
-                              </div>
-                              <span>16<sup>th</sup></span>
-                            </div>
-                            <div class="range">
-                              <span>8:00 - 17:00</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="calender">
-                          <img src="images/about/outline.png" alt="outline image">
-                          <div class="calender-details">
-                            <div class="date">
-                              <p>MON</p>
-                              <div class="small-line">
-                              </div>
-                              <span>17<sup>th</sup></span>
-                            </div>
-                            <div class="range">
-                              <span>8:00 - 17:00</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="calender">
-                          <img src="images/about/outline.png" alt="outline image">
-                          <div class="calender-details">
-                            <div class="date">
-                              <p>TUE</p>
-                              <div class="small-line">
-                              </div>
-                              <span>18<sup>th</sup></span>
-                            </div>
-                            <div class="range">
-                              <span>8:00 - 17:00</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="calender">
-                          <img src="images/about/outline.png" alt="outline image">
-                          <div class="calender-details">
-                            <div class="date">
-                              <p>WED</p>
-                              <div class="small-line">
-                              </div>
-                              <span>19<sup>th</sup></span>
-                            </div>
-                            <div class="range">
-                              <span>8:00 - 17:00</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="calender">
-                          <img src="images/about/outline.png" alt="outline image">
-                          <div class="calender-details">
-                            <div class="date">
-                              <p>THU</p>
-                              <div class="small-line">
-                              </div>
-                              <span>20<sup>th</sup></span>
-                            </div>
-                            <div class="range">
-                              <span>8:00 - 17:00</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="calender">
-                          <img src="images/about/outline.png" alt="outline image">
-                          <div class="calender-details">
-                            <div class="date">
-                              <p>FRI</p>
-                              <div class="small-line">
-                              </div>
-                              <span>21<sup>th</sup></span>
-                            </div>
-                            <div class="range">
-                              <span></span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="about-content-body">
-                      <div class="row d-flex flex-wrap justify-content-center align-items-start text-start p-3">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. "</p>
-                        <div class="line"></div>
-                        <div class="footer-text">
-                          <p class="mb-1">tapy, LLC.</p>
-                          <p>Listed company names are trademarks ™ or registered ®
-                            trademarks of their respective holders. Use of them does not
-                            imply any affiliation with or endorsement by them.</p>
-                        </div>
-                      </div>
-                    </div>
+                <div class="parent-container" id="parent-container">
+                  <div class="nav-tabs">
+                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="about-tab" data-bs-toggle="pill" data-bs-target="#pills-about"
+                          type="button" role="tab" aria-controls="pills-contact" aria-selected="true">About</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="links-tab" data-bs-toggle="pill" data-bs-target="#pills-links"
+                          type="button" role="tab" aria-controls="pills-work" aria-selected="false">Links</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-info-tab" data-bs-toggle="pill" data-bs-target="#pills-contact-info"
+                          type="button" role="tab" aria-controls="pills-word" aria-selected="false">Contact info</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="images-tab" data-bs-toggle="pill" data-bs-target="#pills-images"
+                          type="button" role="tab" aria-controls="pills-word" aria-selected="false">Images</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="videos-tab" data-bs-toggle="pill" data-bs-target="#pills-videos"
+                          type="button" role="tab" aria-controls="pills-word" aria-selected="false">Videos</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="appointment-tab" data-bs-toggle="pill" data-bs-target="#pills-appointment"
+                          type="button" role="tab" aria-controls="pills-word" aria-selected="false">Appointment</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="payment-tab" data-bs-toggle="pill" data-bs-target="#pills-payment"
+                          type="button" role="tab" aria-controls="pills-word" aria-selected="false">Payment</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="teams-tab" data-bs-toggle="pill" data-bs-target="#pills-teams"
+                          type="button" role="tab" aria-controls="pills-word" aria-selected="false">Teams</button>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="tab-pane fade links-content p-5 py-2" id="pills-links" role="tabpanel" aria-labelledby="links-tab">
-                    <h3 class="title"> Links 
-                      <span class="caret-left"><i class="fa-solid fa-caret-left"></i></span>
-                      <span class="caret-right"><i class="fa-solid fa-caret-right"></i></span>
-                    </h3>
-                    <div class="links-content-body">
-                      <div class="row d-flex justify-content-center align-items-center flex-column py-3">
-                        <div class="link">
-                          <div class="row w-100 m-0 p-0">
-                            <div class="col-3 p-0 bg-ingo">
-                              <div class="icon w-100 h-100  pt-1">
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active about-content p-2" id="pills-about" role="tabpanel" aria-labelledby="about-tab">
+                      <h3 class="title"> About 
+                        <span class="caret-left"><i class="fa-solid fa-caret-left"></i></span>
+                        <span class="caret-right"><i class="fa-solid fa-caret-right"></i></span>
+                      </h3>
+                      <div class="about-content-body">
+                        <div class="row d-flex flex-wrap justify-content-center align-items-start text-start p-3 my-3">
+                          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "</p>
+                        </div>
+                      </div>
+                      <div class="business-hours text-center py-3 pt-4">
+                        <img src="images/about/bussines-hours.png" alt="business-hours">
+                        <div class="row d-flex m-0 py-4">
+                          <div class="calender">
+                            <img src="images/about/outline.png" alt="outline image">
+                            <div class="calender-details">
+                              <div class="date">
+                                <p>SAT</p>
+                                <div class="small-line">
+                                </div>
+                                <span>15<sup>th</sup></span>
                               </div>
-                            </div>
-                            <div class="col-9 p-0">
-                              <div class="text w-100 h-100 ">
-                                <p class="m-0 p-0">instagram</p>
+                              <div class="range">
+                                <span></span>
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="link">
-                          <div class="row w-100 m-0 p-0">
-                            <div class="col-3 p-0 bg-ingo">
-                              <div class="icon w-100 h-100  pt-1">
-                                <a href="#"><i class="fa-brands fa-twitter"></i></i></a>
+                          <div class="calender">
+                            <img src="images/about/outline.png" alt="outline image">
+                            <div class="calender-details">
+                              <div class="date">
+                                <p>SUN</p>
+                                <div class="small-line">
+                                </div>
+                                <span>16<sup>th</sup></span>
+                              </div>
+                              <div class="range">
+                                <span>8:00 - 17:00</span>
                               </div>
                             </div>
-                            <div class="col-9 p-0">
-                              <div class="text w-100 h-100 ">
-                                <p class="m-0 p-0">Twitter</p>
+                          </div>
+                          <div class="calender">
+                            <img src="images/about/outline.png" alt="outline image">
+                            <div class="calender-details">
+                              <div class="date">
+                                <p>MON</p>
+                                <div class="small-line">
+                                </div>
+                                <span>17<sup>th</sup></span>
+                              </div>
+                              <div class="range">
+                                <span>8:00 - 17:00</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="calender">
+                            <img src="images/about/outline.png" alt="outline image">
+                            <div class="calender-details">
+                              <div class="date">
+                                <p>TUE</p>
+                                <div class="small-line">
+                                </div>
+                                <span>18<sup>th</sup></span>
+                              </div>
+                              <div class="range">
+                                <span>8:00 - 17:00</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="calender">
+                            <img src="images/about/outline.png" alt="outline image">
+                            <div class="calender-details">
+                              <div class="date">
+                                <p>WED</p>
+                                <div class="small-line">
+                                </div>
+                                <span>19<sup>th</sup></span>
+                              </div>
+                              <div class="range">
+                                <span>8:00 - 17:00</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="calender">
+                            <img src="images/about/outline.png" alt="outline image">
+                            <div class="calender-details">
+                              <div class="date">
+                                <p>THU</p>
+                                <div class="small-line">
+                                </div>
+                                <span>20<sup>th</sup></span>
+                              </div>
+                              <div class="range">
+                                <span>8:00 - 17:00</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="calender">
+                            <img src="images/about/outline.png" alt="outline image">
+                            <div class="calender-details">
+                              <div class="date">
+                                <p>FRI</p>
+                                <div class="small-line">
+                                </div>
+                                <span>21<sup>th</sup></span>
+                              </div>
+                              <div class="range">
+                                <span></span>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="tab-pane fade contact-info-content p-3" id="pills-contact-info" role="tabpanel" aria-labelledby="contact-info-tab">
-                    <h3 class="title"> Contact Info 
-                      <span class="caret-left"><i class="fa-solid fa-caret-left"></i></span>
-                      <span class="caret-right"><i class="fa-solid fa-caret-right"></i></span>
-                    </h3>
-                    <div class="contact-info-content-body">
-                      <div class="row d-flex justify-content-center align-items-center flex-column py-3 m-0 px-0">
-                        <div class="col-12">
-                          <div class="row m-0 p-0">
-                            <div class="col-3 p-2 d-flex justify-content-center align-items-center">
-                              <span><i class="fa-solid fa-mobile-screen"></i></span>
-                            </div>
-                            <div class="col-9 p-2 d-flex justify-content-center align-items-center">
-                              <div class="contact-detail">
-                                <a target="_self" href="tel:01012121212">+201012121212</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="row m-0 p-0">
-                            <div class="col-3 p-2 d-flex justify-content-center align-items-center">
-                              <span><i class="fa-solid fa-phone"></i></span>
-                            </div>
-                            <div class="col-9 p-2 d-flex justify-content-center align-items-center">
-                              <div class="contact-detail">
-                                <a target="_self" href="tel:01012121212">+201012121212</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="row m-0 p-0">
-                            <div class="col-3 p-2 d-flex justify-content-center align-items-center">
-                              <span><i class="fa-solid fa-envelope"></i></span>
-                            </div>
-                            <div class="col-9 p-2 d-flex justify-content-center align-items-center">
-                              <div class="contact-detail">
-                                <a target="_self" href="mailto:info@tapycard.com">info@tapycard.com</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <div class="row m-0 p-0">
-                            <div class="map pt-4 w-100">
-                              <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3453.57196195858!2d31.20653858488473!3d30.049135581880645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDAyJzU2LjkiTiAzMcKwMTInMTUuNyJF!5e0!3m2!1sar!2seg!4v1676244378352!5m2!1sar!2seg" width="280" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                              <a target="_self" class="location-btn" href="https://maps.google.com/?q=30.049135600861234,31.20434987182126">Click to see location</a>
-                            </div>
+                      <div class="about-content-body">
+                        <div class="row d-flex flex-wrap justify-content-center align-items-start text-start p-3">
+                          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. "</p>
+                          <div class="line"></div>
+                          <div class="footer-text">
+                            <p class="mb-1">tapy, LLC.</p>
+                            <p>Listed company names are trademarks ™ or registered ®
+                              trademarks of their respective holders. Use of them does not
+                              imply any affiliation with or endorsement by them.</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div> 
-                  <div class="tab-pane fade images-content" id="pills-images" role="tabpanel" aria-labelledby="images-tab">
-                    <h3 class="title"> Images
-                      <span class="caret-left"><i class="fa-solid fa-caret-left"></i></span>
-                      <span class="caret-right"><i class="fa-solid fa-caret-right"></i></span>
-                    </h3>
-                    <div class="images-content-body mt-3">
-                      <div class="images-tabs">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#pills-all" type="button" role="tab" aria-controls="home" aria-selected="true">All (10)</button>
-                          </li>
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="rooms-tab" data-bs-toggle="tab" data-bs-target="#pills-rooms" type="button" role="tab" aria-controls="profile" aria-selected="false">Rooms (7)</button>
-                          </li>
-                          <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="facilities-tab" data-bs-toggle="tab" data-bs-target="#pills-facilities" type="button" role="tab" aria-controls="contact" aria-selected="false">Facilities (4)</button>
-                          </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                          <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="all-tab"> 
-                            <div class="row m-0 p-0">
-                              <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper allSwiper">
-                                <div class="swiper-wrapper">
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                                  </div>
+                    <div class="tab-pane fade links-content p-5 px-3 py-2" id="pills-links" role="tabpanel" aria-labelledby="links-tab">
+                      <h3 class="title"> Links 
+                        <span class="caret-left"><i class="fa-solid fa-caret-left"></i></span>
+                        <span class="caret-right"><i class="fa-solid fa-caret-right"></i></span>
+                      </h3>
+                      <div class="links-content-body">
+                        <div class="row  d-flex justify-content-center align-items-center flex-row py-3">
+                          <div class="link">
+                            <div class="row w-100 m-0 p-0">
+                              <div class="col-3 p-0 bg-ingo">
+                                <div class="icon w-100 h-100  pt-1">
+                                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
                               </div>
-                              <div thumbsSlider="" class="swiper myAllSwiper">
-                                <div class="swiper-wrapper">
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                                  </div>
+                              <div class="col-9 p-0">
+                                <div class="text w-100 h-100 ">
+                                  <p class="m-0 p-0">instagram</p>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div class="tab-pane fade" id="pills-rooms" role="tabpanel" aria-labelledby="rooms-tab">
-                            <div class="row m-0 p-0">
-                              <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper roomsSwiper">
-                                <div class="swiper-wrapper">
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                                  </div>
+                          <div class="link">
+                            <div class="row w-100 m-0 p-0">
+                              <div class="col-3 p-0 bg-ingo">
+                                <div class="icon w-100 h-100  pt-1">
+                                  <a href="#"><i class="fa-brands fa-twitter"></i></i></a>
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
                               </div>
-                              <div thumbsSlider="" class="swiper myRoomsSwiper">
-                                <div class="swiper-wrapper">
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                                  </div>
+                              <div class="col-9 p-0">
+                                <div class="text w-100 h-100 ">
+                                  <p class="m-0 p-0">Twitter</p>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div class="tab-pane fade" id="pills-facilities" role="tabpanel" aria-labelledby="facilities-tab">
-                            <div class="row m-0 p-0">
-                              <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper facilitiesSwiper">
-                                <div class="swiper-wrapper">
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                                  </div>
+                          <div class="link">
+                            <div class="row w-100 m-0 p-0">
+                              <div class="col-3 p-0 bg-ingo">
+                                <div class="icon w-100 h-100  pt-1">
+                                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
                                 </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
                               </div>
-                              <div thumbsSlider="" class="swiper myFacilitiesSwiper">
-                                <div class="swiper-wrapper">
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                                  </div>
-                                  <div class="swiper-slide">
-                                    <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                                  </div>
+                              <div class="col-9 p-0">
+                                <div class="text w-100 h-100 ">
+                                  <p class="m-0 p-0">instagram</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="link">
+                            <div class="row w-100 m-0 p-0">
+                              <div class="col-3 p-0 bg-ingo">
+                                <div class="icon w-100 h-100  pt-1">
+                                  <a href="#"><i class="fa-brands fa-twitter"></i></i></a>
+                                </div>
+                              </div>
+                              <div class="col-9 p-0">
+                                <div class="text w-100 h-100 ">
+                                  <p class="m-0 p-0">Twitter</p>
                                 </div>
                               </div>
                             </div>
@@ -496,76 +324,592 @@
                         </div>
                       </div>
                     </div>
-                  </div> 
-                  <div class="tab-pane fade videos-content" id="pills-videos" role="tabpanel" aria-labelledby="videos-tab">
-                    <h3 class="title"> Videos
-                      <span class="caret-left"><i class="fa-solid fa-caret-left"></i></span>
-                      <span class="caret-right"><i class="fa-solid fa-caret-right"></i></span>
-                    </h3>
-                    <div class="row py-3">
-                      <div style="width: 100%;" class="plyr__video-embed" id="player">
-                        <iframe src="https://www.youtube.com/embed/Y9jYdvef1z4"
-                            allowfullscreen
-                            allowtransparency
-                            allow="autoplay">
-                        </iframe>
-                    </div>
-                    </div>
-                  </div> 
-                  <div class="tab-pane fade appointment-content p-3" id="pills-appointment" role="tabpanel" aria-labelledby="appointment-tab">
-                    <h3 class="title"> Appointment
-                      <span class="caret-left"><i class="fa-solid fa-caret-left"></i></span>
-                      <span class="caret-right"><i class="fa-solid fa-caret-right"></i></span>
-                    </h3>
-                    <div class="appointment-content-body py-3">
-                      <div class="form-card p-2">
+                    <div class="tab-pane fade contact-info-content p-3" id="pills-contact-info" role="tabpanel" aria-labelledby="contact-info-tab">
+                      <h3 class="title"> Contact Info 
+                        <span class="caret-left"><i class="fa-solid fa-caret-left"></i></span>
+                        <span class="caret-right"><i class="fa-solid fa-caret-right"></i></span>
+                      </h3>
+                      <div class="contact-info-content-body">
+                        <div class="row d-flex justify-content-center align-items-center flex-column py-3 m-0 px-0">
+                          <div class="col-12">
+                            <div class="row m-0 p-0">
+                              <div class="col-3 p-2 d-flex justify-content-center align-items-center">
+                                <span><i class="fa-solid fa-mobile-screen"></i></span>
+                              </div>
+                              <div class="col-9 p-2 d-flex justify-content-center align-items-center">
+                                <div class="contact-detail">
+                                  <a target="_self" href="tel:01012121212">+201012121212</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="row m-0 p-0">
+                              <div class="col-3 p-2 d-flex justify-content-center align-items-center">
+                                <span><i class="fa-solid fa-phone"></i></span>
+                              </div>
+                              <div class="col-9 p-2 d-flex justify-content-center align-items-center">
+                                <div class="contact-detail">
+                                  <a target="_self" href="tel:01012121212">+201012121212</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="row m-0 p-0">
+                              <div class="col-3 p-2 d-flex justify-content-center align-items-center">
+                                <span><i class="fa-solid fa-envelope"></i></span>
+                              </div>
+                              <div class="col-9 p-2 d-flex justify-content-center align-items-center">
+                                <div class="contact-detail">
+                                  <a target="_self" href="mailto:info@tapycard.com">info@tapycard.com</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="row m-0 p-0">
+                              <div class="map pt-4 w-100">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3453.57196195858!2d31.20653858488473!3d30.049135581880645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDAyJzU2LjkiTiAzMcKwMTInMTUuNyJF!5e0!3m2!1sar!2seg!4v1676244378352!5m2!1sar!2seg" width="280" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <a target="_self" class="location-btn" href="https://maps.google.com/?q=30.049135600861234,31.20434987182126">Click to see location</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> 
+                    <div class="tab-pane fade images-content" id="pills-images" role="tabpanel" aria-labelledby="images-tab">
+                      <h3 class="title"> Images
+                        <span class="caret-left"><i class="fa-solid fa-caret-left"></i></span>
+                        <span class="caret-right"><i class="fa-solid fa-caret-right"></i></span>
+                      </h3>
+                      <div class="images-content-body mt-3">
+                        <div class="images-tabs">
+                          <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#pills-all" type="button" role="tab" aria-controls="home" aria-selected="true">All (10)</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="rooms-tab" data-bs-toggle="tab" data-bs-target="#pills-rooms" type="button" role="tab" aria-controls="profile" aria-selected="false">Rooms (7)</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="facilities-tab" data-bs-toggle="tab" data-bs-target="#pills-facilities" type="button" role="tab" aria-controls="contact" aria-selected="false">Facilities (4)</button>
+                            </li>
+                          </ul>
+                          <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="all-tab"> 
+                              <div class="row m-0 p-0">
+                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper allSwiper">
+                                  <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                                    </div>
+                                  </div>
+                                  <div class="swiper-button-next"></div>
+                                  <div class="swiper-button-prev"></div>
+                                </div>
+                                <div thumbsSlider="" class="swiper myAllSwiper">
+                                  <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-rooms" role="tabpanel" aria-labelledby="rooms-tab">
+                              <div class="row m-0 p-0">
+                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper roomsSwiper">
+                                  <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                                    </div>
+                                  </div>
+                                  <div class="swiper-button-next"></div>
+                                  <div class="swiper-button-prev"></div>
+                                </div>
+                                <div thumbsSlider="" class="swiper myRoomsSwiper">
+                                  <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-facilities" role="tabpanel" aria-labelledby="facilities-tab">
+                              <div class="row m-0 p-0">
+                                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper facilitiesSwiper">
+                                  <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                                    </div>
+                                  </div>
+                                  <div class="swiper-button-next"></div>
+                                  <div class="swiper-button-prev"></div>
+                                </div>
+                                <div thumbsSlider="" class="swiper myFacilitiesSwiper">
+                                  <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                      <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> 
+                    <div class="tab-pane fade videos-content" id="pills-videos" role="tabpanel" aria-labelledby="videos-tab">
+                      <h3 class="title"> Videos
+                        <span class="caret-left"><i class="fa-solid fa-caret-left"></i></span>
+                        <span class="caret-right"><i class="fa-solid fa-caret-right"></i></span>
+                      </h3>
+                      <div class="row mt-3">
+                        <h5 class="mb-0 text-dark fw-bold">video title</h5>
+                      </div>
+                      <div class="row py-3">
+                        <div style="width: 100%;" class="plyr__video-embed" id="player">
+                          <iframe src="https://www.youtube.com/embed/Y9jYdvef1z4"
+                              allowfullscreen
+                              allowtransparency
+                              allow="autoplay">
+                          </iframe>
+                      </div>
+                      </div>
+                    </div> 
+                    <div class="tab-pane fade appointment-content p-3" id="pills-appointment" role="tabpanel" aria-labelledby="appointment-tab">
+                      <h3 class="title"> Appointment
+                        <span class="caret-left"><i class="fa-solid fa-caret-left"></i></span>
+                        <span class="caret-right"><i class="fa-solid fa-caret-right"></i></span>
+                      </h3>
+                      <div class="appointment-content-body py-3 ">
                         <form action="">
-                          <div class="form-content d-flex flex-column ">
-                            <div class="input-gp">
-                                <label for="name"> Name </label>
-                                <input type="text" id="name" class="form-control mb-2" autocomplete="off" autofocus="on">
+                          <div class="form-card py-2 px-0 mb-3">
+                            <div id="vanilla-calendar"></div>
+                                <div class="vanilla-calendar-info">
+                                  <span id="vanilla-calendar-info-date" >«Choose a day»</span>
+                                  <span id="vanilla-calendar-info-time">«Choose a time»</span>
+                                </div>
+                          </div>
+
+                        <div class="form-card my-3">
+                          <div class="row">
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link " id="pills-am-tab" data-bs-toggle="pill" data-bs-target="#pills-am" type="button" role="tab" aria-controls="pills-home" aria-selected="false">am</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-pm-tab" data-bs-toggle="pill" data-bs-target="#pills-pm" type="button" role="tab" aria-controls="pills-profile" aria-selected="true">pm</button>
+                              </li>
+                              
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                              <div class="tab-pane fade " id="pills-am" role="tabpanel" aria-labelledby="pills-am-tab">
+                                <div class="row m-0 p-0 px-3 d-flex justify-content-start align-items-center">
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">06:00</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">06:30</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">07:00</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">07:30</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">08:00</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">08:30</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">09:00</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="tab-pane fade show active" id="pills-pm" role="tabpanel" aria-labelledby="pills-pm-tab">
+                                <div class="row m-0 p-0 px-3 d-flex justify-content-start align-items-center">
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">06:00</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">06:30</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">07:00</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">07:30</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">08:00</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">08:30</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">09:00</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">09:30</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">10:00</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-3 ">
+                                    <div class="date-hour">
+                                      <p id="hour" class="hover">10:30</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <div class="input-gp">
-                                <label for="phone"> Phone </label>
-                                <input type="number" id="phone" class="form-control mb-2" autocomplete="off"> 
-                            </div>
-                            <div class="input-gp">
-                                <label for="email"> Email </label>
-                                <input type="email" id="email" class="form-control mb-2" autocomplete="off">
-                            </div>
-                            <div class="input-gp text-center">
-                                <button type="submit" id="submitBtn" class="btn my-2">Confirm</button>
-                            </div>
+                            
+                          </div>
+                        </div>
+
+
+                        <div class="form-card p-2">
+                            <div class="form-content d-flex flex-column ">
+                              <div class="input-gp d-none">
+                                  <label for="username"> hidden time </label>
+                                  <input type="text" id="time" class="form-control mb-2" autocomplete="off" autofocus="on">
+                              </div>
+                              <div class="input-gp">
+                                  <label for="username"> Name </label>
+                                  <input type="text" id="username" class="form-control mb-2" autocomplete="off" autofocus="on">
+                              </div>
+                              <div class="input-gp">
+                                  <label for="phone"> Phone </label>
+                                  <input type="number" id="phone" class="form-control mb-2" autocomplete="off"> 
+                              </div>
+                              <div class="input-gp">
+                                  <label for="email"> Email </label>
+                                  <input type="email" id="email" class="form-control mb-2" autocomplete="off">
+                              </div>
+                              <div class="input-gp text-center">
+                                  <button type="button" id="submitBtn" class="btn my-2">Confirm</button>
+                              </div>
+                          </div>
                         </div>
                         </form>
                       </div>
+                    </div> 
+                    <div class="tab-pane fade payment-content" id="pills-payment" role="tabpanel" aria-labelledby="payment-tab">
+                      <h3 class="title"> Payment 
+                        <span class="caret-left"><i class="fa-solid fa-caret-left"></i></span>
+                        <span class="caret-right"><i class="fa-solid fa-caret-right"></i></span>
+                      </h3>
+                      <div class="payment-content-body">
+                        <div class="row">
+                          <h4>1. Select your payment method</h4>
+                          <ul class="nav nav-pills my-3 px-4 d-flex justify-content-between align-items-center" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="pills-bank-tab" data-bs-toggle="pill" data-bs-target="#pills-bank" type="button" role="tab" aria-controls="pills-bank" aria-selected="true">
+                                <img src="images/payment/bank-way.png" alt="bank way">
+                              </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="pills-paypal-tab" data-bs-toggle="pill" data-bs-target="#pills-paypal" type="button" role="tab" aria-controls="pills-paypal" aria-selected="false">
+                                <img src="images/payment/paypal-way.png" alt="paypal way">
+                              </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="pills-credit-tab" data-bs-toggle="pill" data-bs-target="#pills-credit" type="button" role="tab" aria-controls="pills-credit" aria-selected="false">
+                                <img src="images/payment/credit-way.png" alt="credit way">
+                              </button>
+                            </li>
+                          </ul>
+                          <div class="tab-content py-3" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-bank" role="tabpanel" aria-labelledby="pills-bank-tab">
+                              <h4>2. Enter Account Bank details</h4>
+                              <form action="#">
+                                <div class="row m-0 px-3">
+                                  <div class="col-12 p-2">
+                                    <input type="number" class="form-control text-inputs" placeholder="Account number" >
+                                  </div>
+                                  <div class="col-6 p-2">
+                                    <input type="text" class="form-control text-inputs" placeholder="Bank name">
+                                  </div>
+                                  <div class="col-6 p-2">
+                                    <input type="text" class="form-control text-inputs" placeholder="Amount">
+                                  </div>
+                                  <div class="col-12 p-2">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="bank-check">
+                                      <label class="form-check-label hover" for="bank-check">
+                                        Save Bank account
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 text-center">
+                                    <button type="button" class="btn" id="submitBankBtn">Confirm</button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="tab-pane fade" id="pills-paypal" role="tabpanel" aria-labelledby="pills-paypal-tab">
+                              <h4>2. Enter Card details</h4>
+                              <form action="#">
+                                <div class="row m-0 px-3">
+                                  <div class="col-12 p-2">
+                                    <input type="text" class="form-control text-inputs" placeholder="Email or Mobile No." >
+                                  </div>
+                                  <div class="col-6 p-2">
+                                    <input type="password" class="form-control text-inputs" placeholder="Password">
+                                  </div>
+                                  <div class="col-6 p-2">
+                                    <input type="text" class="form-control text-inputs" placeholder="Amount">
+                                  </div>
+                                  <div class="col-12 p-2">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="paypal-check">
+                                      <label class="form-check-label hover" for="paypal-check">
+                                        Save Paypal account
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 text-center">
+                                    <button type="button" class="btn" id="submitPaypalBtn">Confirm</button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="tab-pane fade" id="pills-credit" role="tabpanel" aria-labelledby="pills-credit-tab">
+                              <h4>2. Enter Card details</h4>
+                              <form action="#">
+                                <div class="row m-0 px-3">
+                                  <div class="col-12 p-2">
+                                    <input type="number" class="form-control text-inputs" placeholder="Mobile No." >
+                                  </div>
+                                  <div class="col-6 p-2">
+                                    <input type="text" class="form-control text-inputs" placeholder="Amount">
+                                  </div>
+                                  <div class="col-12 p-2">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="wallet-check">
+                                      <label class="form-check-label hover" for="wallet-check">
+                                        Save Wallet
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 text-center">
+                                    <button type="button" class="btn" id="submitCreditBtn">Confirm</button>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          
+                         </div>
+                      </div>
                     </div>
-                  </div> 
-                  <div class="tab-pane fade" id="pills-payment" role="tabpanel" aria-labelledby="payment-tab">
-                    <div class="row">
-                      <div class="col-md-6 col-lg-4 p-3">
-                        <div class="work-item position-relative overflow-hidden ">
-                          <h3>mohamed 9</h3>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-lg-4 p-3">
-                        <div class="work-item position-relative overflow-hidden ">
-                          <h3>mohamed 9</h3>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-lg-4 p-3">
-                        <div class="work-item position-relative overflow-hidden ">
-                          <h3>mohamed 9</h3>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-lg-4 p-3">
-                        <div class="work-item position-relative overflow-hidden ">
-                          <h3>mohamed 9</h3>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-lg-4 p-3">
-                        <div class="work-item position-relative overflow-hidden ">
-                          <h3>mohamed 9</h3>
+                    <div class="tab-pane fade teams-content" id="pills-teams" role="tabpanel" aria-labelledby="teams-tab">
+                      <h3 class="title"> Teams 
+                        <span class="caret-left"><i class="fa-solid fa-caret-left"></i></span>
+                        <span class="caret-right"><i class="fa-solid fa-caret-right"></i></span>
+                      </h3>
+
+                      <div class="teams-content-body my-3 pt-3">
+                        <div class="row m-0 p-0">
+                          <div class="accordion" id="parent-accordion">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="parentHeading">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#parentCollapse" aria-expanded="false" aria-controls="parentCollapse">
+                                 Sales
+                                </button>
+                              </h2>
+                              <div id="parentCollapse" class="accordion-collapse collapse" aria-labelledby="parentHeading" data-bs-parent="#parent-accordion">
+                                <div class="accordion-body px-2">
+
+                                  <div class="accordion" id="firstChildAccordion">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="firstChildHeading">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#firstChildCollapse" aria-expanded="false" aria-controls="firstChildCollapse">
+                                         Marketing
+                                        </button>
+                                      </h2>
+                                      <div id="firstChildCollapse" class="accordion-collapse collapse" aria-labelledby="firstChildHeading" data-bs-parent="#firstChildAccordion">
+                                        <div class="accordion-body px-2">
+                                          
+                                          <div class="accordion" id="secondChildAccordion">
+                                            <div class="accordion-item">
+                                              <h2 class="accordion-header" id="secondChildHeading">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#secondChildCollapse" aria-expanded="false" aria-controls="secondChildCollapse">
+                                                 Finance
+                                                </button>
+                                              </h2>
+                                              <div id="secondChildCollapse" class="accordion-collapse collapse" aria-labelledby="secondChildHeading" data-bs-parent="#secondChildAccordion">
+                                                <div class="accordion-body px-2">
+                                                  <div class="card">
+                                                    <div class="row w-100 m-0 p-0 py-3 ">
+                                                      <div class="col-5">
+                                                        <img src="images/header/profile-img.jpg" class="image-parent" alt="image test">
+                                                      </div>
+                                                      <div class="col-7">
+                                                        <div class="row m-0 px-3 d-flex justify-content-end ">
+                                                          <img src="images/header/profile-img.jpg" class="image-child" alt="image test">
+                                                        </div>
+                                                        <div class="m-0 p-0  text-start">
+                                                          <p class="m-0 p-0">Name</p>
+                                                          <p class="m-0 p-0">Description</p>
+                                                          <p class="m-0 p-0">Sub title</p>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -575,7 +919,7 @@
             <!-- end of:: user-details  -->
             <!-- begin of:: footer  -->
             <footer>
-              <button class="text-center w-100">Login</button>
+              <a class="text-center w-100" target="_self" href="https://tapycard.me/login">Login</a>
             </footer>
             <!-- end of:: footer  -->
           </div>
@@ -587,6 +931,7 @@
     <script src="js/jquery-migrate-1.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/CDNSFree2/Plyr/plyr.js"></script>
+    <script src="js/vanilla-calendar.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

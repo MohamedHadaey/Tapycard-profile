@@ -28,10 +28,15 @@ body{
     font-family: 'Tajawal', sans-serif;
 }
 
+.hover:hover {
+    cursor: pointer;
+}
+
 #home {
     background-color: #EFEFEF;
     min-height: 100vh;
 }
+
 
 #home .container .content {
     margin: auto;
@@ -120,9 +125,9 @@ body{
 #home .container .content header .profile-image {
     position: absolute;
     width: 135px;
-    height: 138px;
+    height: 135px;
     border-radius: 50%;
-    top: 114px;
+    top: 118px;
     left: 50%;
     transform: translateX(-50%) translateY(50%);
     outline: 5px solid #fff;
@@ -151,6 +156,7 @@ body{
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 0;
+    font-family: "britanic";
 }
 
 #home .container .content .user-info p {
@@ -202,17 +208,90 @@ body{
     padding: 0;
 }
 
+#home .container .content .user-details .contact-container {
+    display: none;
+}
+
+#home .container .content .user-details .contact-container .row .back-btn{
+    color: #000704 ;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+    width: fit-content;
+    border-radius: 3px;
+}
+
+#home .container .content .user-details .contact-container .row .back-btn:hover {
+    box-shadow: 0px 3px 5px #A5A5A5;
+    cursor: pointer;
+}
+
+#home .container .content .user-details .contact-container .title {
+    font-weight: bold;
+    color: #343434;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    padding-bottom: 10px;
+}
+#home .container .content .user-details .contact-container .title .caret-right {
+    position: absolute;
+    top: 2px;
+    left: -25px;
+}
+
+#home .container .content .user-details .contact-container .title .caret-left {
+    position: absolute;
+    top: 2px;
+    right: -25px;
+}
+
+#home .container .content .user-details .contact-container .row p {
+    width: 90%;
+    color: #6D6D6D;
+    font-size: 16px;
+    margin: auto;
+}
+
+#home .container .content .user-details .contact-container .contact-form-container {
+    width: 100%;
+    margin: 20px 0;
+}
+
+#home .container .content .user-details .contact-container .contact-form-container form {
+    width: 100%;
+}
+
+#home .container .content .user-details .contact-container .contact-form-container form .text-inputs {
+    background-color: #eaeaea;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#home .container .content .user-details .contact-container .contact-form-container form  button {
+    margin: 20px 0;
+    background-color: #3f3f3f;
+    color: #fff;
+    font-size: 20px;
+    padding: 2px 50px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+#home .container .content .user-details .contact-container .contact-form-container form  button:hover {
+    box-shadow: 0px 3px 5px#6D6D6D ;
+}
+
+
+/*******************************************/
+
 #home .container .content .user-details .head {
     width: 100%;
     margin-bottom: 20px;
 }
 
-#home .container .content .user-details .head .col-6 {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 #home .container .content .user-details .head a  {
     background-color: #343434;
@@ -227,6 +306,7 @@ body{
     box-shadow: 0px 0px 3px 0px #3d3d3d;
     border-radius: 5px;
     transition: all 0.3s;
+    margin: 0 5px;
 }
 
 #home .container .content .user-details .head a:hover {
@@ -637,23 +717,23 @@ body{
     margin: auto;
 }
 
-#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card form .form-content {
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card  .form-content {
     width: 100%;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
-#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card form .form-content .input-gp {
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card  .form-content .input-gp {
     text-align: start;
     padding: 3px 0 0 0;
 }
 
-#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card form .form-content .input-gp label {
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card  .form-content .input-gp label {
     padding: 0 5px;
     font-weight: bold;
     color: #6D6D6D;
 }
 
-#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card form .form-content .input-gp input {
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card  .form-content .input-gp input {
     color: #000704;
     font-weight: bold;
     background-color: #eee;
@@ -663,21 +743,21 @@ body{
     border-bottom: 5px solid #A5A5A5;
 }
 
-#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card form .form-content .input-gp input:focus {
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card .form-content .input-gp input:focus {
     box-shadow: none;
 }
 
-#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card form .form-content .input-gp input[type="number"]::-webkit-inner-spin-button,#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card form .form-content .input-gp input[type="number"]::-webkit-outer-spin-button {
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card  .form-content .input-gp input[type="number"]::-webkit-inner-spin-button,#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card .form-content .input-gp input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     appearance: none;
 }
 
-#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card form .form-content .input-gp input[type="number"] {
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card .form-content .input-gp input[type="number"] {
     -moz-appearance: textfield;
     appearance: textfield;
 }
 
-#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card form .form-content .input-gp button{
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card  .form-content .input-gp button{
    background-color: #383838;
    color: #fff;
    letter-spacing: 1.5px;
@@ -687,9 +767,207 @@ body{
    padding: 3px 50px;
 }
 
-#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card form .form-content .input-gp button:hover {
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card .form-content .input-gp button:hover {
     border-radius: 15px;
 }
+
+
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card .nav-pills {
+    width: 100px;
+    background-color: #000704;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    border-radius: 7px;
+}
+
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card .nav-pills .nav-item {
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 5px;
+    width: 50%;
+}
+
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card .nav-pills .nav-item button {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    color: #fff;
+    padding: 0 8px;
+}
+
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card .nav-pills .nav-item .active {
+    background-color: #fff;
+    color: #000;
+}
+
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card .tab-content .col-6 {
+    padding: 0 20px;
+    text-align: center;
+}
+
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card .tab-content .date-hour a {
+    text-decoration: none;
+}
+
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card .tab-content .date-hour p {
+    padding: 0;
+    font-size: 20px; 
+    font-weight: bold;
+    color: #A5A5A5;
+    margin: 0;
+    transition: all 0.3s;
+}
+
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card .tab-content .date-hour p:hover {
+    color: #000704;
+}
+
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card .tab-content .date-hour .active {
+    color: #000704;
+}
+
+#home .container .content .user-details .tab-content .appointment-content .appointment-content-body .form-card .vanilla-calendar {
+    border: 1px solid #efefef;
+				box-shadow: 0 0 10px -10px #000;
+				margin: 30px auto 10px;
+}
+.vanilla-calendar-header__content {
+    justify-content: flex-start;
+    padding-left: 5px;
+}
+
+.vanilla-calendar-info {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 5px;
+    margin: 20px auto;
+    width: 280px;
+    border: 1px solid #efefef;
+    box-shadow: 0 0 10px -10px #000;
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: black;
+}
+/********************************/
+#home .container .content .user-details .tab-content .payment-content .payment-content-body {
+    text-align: start;
+    padding: 20px 10px;
+}
+
+#home .container .content .user-details .tab-content .payment-content .payment-content-body h4 {
+    color: #000704;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#home .container .content .user-details .tab-content .payment-content .payment-content-body .nav-pills .nav-item {
+    width: 100px;
+    height: 70px;
+
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+#home .container .content .user-details .tab-content .payment-content .payment-content-body .nav-pills .nav-item button {
+    width: 100%;
+    background-image: url("../images/payment/payment-way-bg.png");
+    background-size: 100% 100%;
+    background-color: transparent;
+    transition: all 0.5s !important;
+}
+
+#home .container .content .user-details .tab-content .payment-content .payment-content-body .nav-pills .nav-item .active {
+    background-image: url("../images/payment/payment-way-bg-active.png");
+}
+
+#home .container .content .user-details .tab-content .payment-content .payment-content-body .nav-pills .nav-item button img {
+    width: 50px;
+    max-height: 45px;
+}
+
+#home .container .content .user-details .tab-content .payment-content .payment-content-body .tab-content .tab-pane h4 {
+    color: #000704;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#home .container .content .user-details .tab-content .payment-content .payment-content-body .tab-content .tab-pane form {
+    width: 100%;
+}
+
+#home .container .content .user-details .tab-content .payment-content .payment-content-body .tab-content .tab-pane form .text-inputs {
+    background-color: #eaeaea;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+#home .container .content .user-details .tab-content .payment-content .payment-content-body .tab-content .tab-pane form .col-12:last-of-type input {
+
+    margin-right:  10px;
+}
+
+#home .container .content .user-details .tab-content .payment-content .payment-content-body .tab-content .tab-pane form .col-12:last-of-type input::placeholder {
+    color: #09c;
+}
+
+#home .container .content .user-details .tab-content .payment-content .payment-content-body .tab-content .tab-pane form input[type="number"]::-webkit-inner-spin-button, #home .container .content .user-details .tab-content .payment-content .payment-content-body .tab-content .tab-pane form input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#home .container .content .user-details .tab-content .payment-content .payment-content-body .tab-content .tab-pane form input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+#home .container .content .user-details .tab-content .payment-content .payment-content-body .tab-content .tab-pane form  button {
+    background-color: #3f3f3f;
+    color: #fff;
+    font-size: 20px;
+    padding: 2px 50px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+#home .container .content .user-details .tab-content .payment-content .payment-content-body .tab-content .tab-pane form  button:hover {
+    box-shadow: 0px 3px 5px#6D6D6D ;
+}
+/************************************/
+.teams-content .teams-content-body  .accordion-body .card {
+    box-shadow: -5px -5px 10px #A5A5A5;
+}
+.teams-content .teams-content-body  .accordion-body .card .col-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; 
+    border-right:  3px solid #000704;
+}
+.teams-content .teams-content-body  .accordion-body .card .col-5 img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.teams-content .teams-content-body  .accordion-body .card .col-7 .row  img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    padding: 0 !important;
+};
+
+
 /* end of:: user-details*/
 /* begin of:: footer */
 footer {
@@ -699,7 +977,8 @@ footer {
     width: 100%;
 }
 
-footer button {
+footer a {
+    display: block;
     border: none;
     width: 100%;
     height: 100%;
@@ -709,8 +988,9 @@ footer button {
     padding: 5px 0;
     transition: all 0.3s;
 }
-footer button:hover { 
+footer a:hover { 
     box-shadow: 10px 10px 20px 10px #000;
+    color: #fff;
 }
 /* end of:: footer */
 /* end global rules  */
@@ -721,7 +1001,18 @@ footer button:hover {
 /* start media queres  */
 
 /* start small screen */
-@media screen and (max-width:576px) {
+@media screen and (max-width:411px) {
+    #home {
+        background-color: #3f3f3f;
+        min-height: 100vh;
+    }
+
+    #home .container {
+        padding: 0 !important;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width:577px) {
     
     
 }
