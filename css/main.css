@@ -656,6 +656,14 @@ body{
     background-position: center;
   }
 
+  #home .container .content .user-details .tab-content .images-content .images-content-body .images-tabs .swiper-wrapper .parent-swiper-slide {
+    height: 400px !important;
+  }
+
+  #home .container .content .user-details .tab-content .images-content .images-content-body .images-tabs .swiper-wrapper .child-swiper-slide {
+    height: 90px !important;
+  }
+
   #home .container .content .user-details .tab-content .images-content .images-content-body .images-tabs .allSwiper, #home .container .content .user-details .tab-content .images-content .images-content-body .images-tabs .roomsSwiper, .facilitiesSwiper {
     height: 80%;
     width: 100%;
@@ -683,6 +691,8 @@ body{
     height: 100%;
     object-fit: cover;
   }
+
+  /* #home .container .content .user-details .tab-content .images-content .images-content-body */
   /******************************/
 #home .container .content .user-details .tab-content .appointment-content .title {
     font-weight: bold;
